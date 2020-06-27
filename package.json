@@ -1,0 +1,35 @@
+{
+  "name": "@q/hotpack-compress",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "hotpack plugin compress",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duhongwei/hotpack-compress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duhongwei/hotpack-compress/issues"
+  },
+  "homepage": "https://github.com/duhongwei/hotpack-compress#readme",
+  "maintainers": [
+    {
+      "name": "duhongwei",
+      "email": "duhongwei@360.cn"
+    }
+  ],
+  "dependencies": {
+    "clean-css": "^4.2.3",
+    "html-minifier": "^4.0.0",
+    "uglify-es": "^3.3.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.1"
+  }
+}
