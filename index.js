@@ -14,6 +14,8 @@ export default async function ({ debug, opt }) {
       if (!/\.(js|css|html|htm)$/.test(file.key)) {
         continue;
       }
+      if (file.meta.minified) continue
+      
       let result = null
       debug(`compress ${file.key}`)
       switch (extname(file.key)) {
