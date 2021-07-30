@@ -6,7 +6,6 @@ const minify = htmlProvider.minify
 export default async function ({ debug, opt }) {
   if (this.isDev()) return;
   this.on('compress', (files) => {
-    debug('on event beforeUpload')
     for (let file of files) {
       if (/\.min\.(js|css|html|htm)$/.test(file.key)) {
         continue
