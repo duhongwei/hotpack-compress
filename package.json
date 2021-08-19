@@ -1,6 +1,6 @@
 {
   "name": "@duhongwei/hotpack-compress",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "module",
   "description": "hotpack plugin compress",
   "main": "index.js",
@@ -25,9 +25,9 @@
     }
   ],
   "dependencies": {
-    "clean-css": "^5.1.4",
+    "clean-css": "^5.1.5",
     "html-minifier": "^4.0.0",
-    "uglify-es": "^3.3.9"
+    "uglify-js": "^3.14.1"
   },
   "devDependencies": {
     "eslint": "^7.3.1"

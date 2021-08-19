@@ -1,4 +1,4 @@
-import jsProvider from 'uglify-es'
+import jsProvider from 'uglify-js'
 import cssProvider from 'clean-css'
 import { extname } from 'path'
 import htmlProvider from 'html-minifier';
@@ -19,7 +19,7 @@ export default async function ({ debug, opt }) {
       debug(`compress ${file.key}`)
       switch (extname(file.key)) {
         case '.js':
-          result = jsProvider.minify(file.content, opt.js)
+          result = jsProvider.minify(file.content, opt.js||{})
           if (!result.code) {
             throw result.error
           }
@@ -27,11 +27,11 @@ export default async function ({ debug, opt }) {
           break;
         case '.css':
           //todo record error
-          result = new cssProvider({ compatibility: 'ie9' }).minify(file.content)
+          result = new cssProvider(opt.css || { compatibility: 'ie9' }).minify(file.content)
           result = result.styles
           break
         case '.html':
-          result = minify(file.content, {
+          result = minify(file.content, opt.html || {
             removeAttributeQuotes: true,
             collapseWhitespace: true
           });
