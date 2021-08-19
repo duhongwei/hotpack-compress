@@ -1,7 +1,7 @@
 # Hotpack-compress
 [hotpack](https://github.com/duhongwei/hotpack) plugin compress
 
-Contain three plugins
+Contains three modules
 
 - [uglify-js](https://github.com/mishoo/UglifyJS#readme)
 - [html-minifier](https://github.com/kangax/html-minifier)
@@ -20,11 +20,11 @@ export default {
       name: 'compress',
       use: compress,
       opt:{
-        //Optional, default is {},options of uglify-js plugin
+        //Optional, default is {},options of uglify-js
         js:{},
         //Optional, default is { removeAttributeQuotes: true,collapseWhitespace: true }
         html:{  removeAttributeQuotes: true,collapseWhitespace: true},
-        //Optional, default is {compatibility: 'ie9' },options of clean-css plugin
+        //Optional, default is {compatibility: 'ie9' },options of clean-css 
         css:{compatibility: 'ie9'},
       }
     }
