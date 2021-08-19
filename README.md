@@ -1,13 +1,16 @@
-# hotpack-compress
+# Hotpack-compress
 [hotpack](https://github.com/duhongwei/hotpack) plugin compress
 
-compress html,css,js by "html-minifier",  "clean-css" and "uglify-es"
+Contain three plugins
 
-## usage
+- [uglify-js](https://github.com/mishoo/UglifyJS#readme)
+- [html-minifier](https://github.com/kangax/html-minifier)
+- [clean-css](https://github.com/clean-css/clean-css)
+
+## Usage
 ```bash
-npm install @duhongwei/hotpack-compress
+npm install --save-dev @duhongwei/hotpack-compress
 ```
-
 ```js
 import compress from '@duhongwei/hotpack-compress'
 
@@ -15,7 +18,15 @@ export default {
   plugin: [
     {
       name: 'compress',
-      use: compress
+      use: compress,
+      opt:{
+        //Optional, default is {},options of uglify-js plugin
+        js:{},
+        //Optional, default is { removeAttributeQuotes: true,collapseWhitespace: true }
+        html:{  removeAttributeQuotes: true,collapseWhitespace: true},
+        //Optional, default is {compatibility: 'ie9' },options of clean-css plugin
+        css:{compatibility: 'ie9'},
+      }
     }
   ]
 }
