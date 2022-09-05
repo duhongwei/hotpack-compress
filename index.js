@@ -39,7 +39,9 @@ export default async function ({ debug, opt }) {
         default:
           break
       }
-      file.content = result
+      if (result) {
+        file.content = result
+      }
     }
   }, true)
 }
